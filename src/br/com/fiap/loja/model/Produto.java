@@ -2,7 +2,7 @@ package br.com.fiap.loja.model;
 
 public class Produto {
     private String nome;
-    private double preco;
+    protected double preco;
     private String descricao;
     private boolean garantia;
     private boolean produtoNovo;
@@ -18,6 +18,8 @@ public class Produto {
     public double calcularDesconto(int porcentagem){
         return preco - (preco*porcentagem/100);
     }
+
+
 
     public double calcularDesconto(String cupomBemVindo){
         int porcentagem =0;

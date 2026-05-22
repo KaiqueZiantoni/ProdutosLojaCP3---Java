@@ -12,13 +12,14 @@ public class Eletronico extends Produto{
         this.numeroDeSerie = numeroDeSerie;
     }
 
+
+    @Override
     public double calcularDesconto(String cupom) {
         int porcentagem = 20;
         if (cupom.equals("NERD")) {
-            return getPreco() - (getPreco() * porcentagem / 100);
-        } else {
-            return super.calcularDesconto(cupom);
-        }
+            return calcularDesconto(20);
+        } return super.calcularDesconto(cupom);
+
     }
 
     public void exibirDetalhes() {
